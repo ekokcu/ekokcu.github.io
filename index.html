@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshot Resizer Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="app-title-section">
+                        <h1 class="app-title" id="appTitle">Screenshot Resizer Pro</h1>
+                        <p class="app-description" id="appDescription">Resize your screenshots to App Store and Google Play standards</p>
+                    </div>
+                    <div class="language-selector">
+                        <select id="languageSelect" class="form-control language-select">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="tr">🇹🇷 Türkçe</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <div class="container">
+                <!-- Platform Selector -->
+                <section class="platform-section">
+                    <h2 id="platformSelector">Select Platform</h2>
+                    <div class="platform-tabs">
+                        <button class="platform-tab active" data-platform="ios">
+                            <span class="platform-icon">📱</span>
+                            <span>iOS App Store</span>
+                        </button>
+                        <button class="platform-tab" data-platform="android">
+                            <span class="platform-icon">🤖</span>
+                            <span>Android Google Play</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Upload Section -->
+                <section class="upload-section">
+                    <div class="upload-card card">
+                        <div class="card__body">
+                            <h3 id="uploadTitle">Upload Screenshots</h3>
+                            <div class="upload-area" id="uploadArea">
+                                <div class="upload-icon">📁</div>
+                                <p id="uploadDescription">Drag and drop your images or click to select</p>
+                                <p class="upload-formats" id="supportedFormats">Supported formats: JPG, PNG, WebP</p>
+                                <input type="file" id="fileInput" multiple accept="image/*" class="file-input">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Size Selector -->
+                <section class="size-section">
+                    <h3 id="selectSize">Select Target Size</h3>
+                    <div class="size-categories" id="sizeCategories">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </section>
+
+                <!-- Preview Section -->
+                <section class="preview-section" id="previewSection" style="display: none;">
+                    <h3 id="previewTitle">Preview</h3>
+                    <div class="preview-grid" id="previewGrid">
+                        <!-- Dynamic preview items will be inserted here -->
+                    </div>
+                    <div class="download-actions">
+                        <button class="btn btn--primary btn--lg" id="downloadAllBtn">
+                            <span>📦</span>
+                            <span id="downloadAll">Download All (ZIP)</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Processing Indicator -->
+                <div class="processing-overlay" id="processingOverlay" style="display: none;">
+                    <div class="processing-content">
+                        <div class="processing-spinner"></div>
+                        <p id="processing">Processing...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="container">
+                <p>&copy; 2025 Screenshot Resizer Pro. Professional tool for app developers.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
